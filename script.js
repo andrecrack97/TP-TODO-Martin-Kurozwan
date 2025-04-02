@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var tareas = JSON.parse(localStorage.getItem("tareas")) || [];
 
+    /////LO DE LOCAL STORAGE
     function guardarTareas() {
         localStorage.setItem("tareas", JSON.stringify(tareas));
     }
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i < tareas.length; i++) {
             let tarea = tareas[i];
     
+            ////SI NO CUMPLE EL FILRO NO LAS MUESTRA
             if (filtro === "pendientes" && tarea.completada) continue;
             if (filtro === "completadas" && !tarea.completada) continue;
     
@@ -71,11 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
         entradaTarea.value = "";
     });
 
-    entradaTarea.addEventListener("keypress", function(e) {
-        if (e.key === "Enter") {
-            botonAgregarTarea.click();
-        }
-    });
+
 
     botonEliminarCompletadas.addEventListener("click", function() {
         tareas = tareas.filter(tarea => !tarea.completada);

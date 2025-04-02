@@ -107,10 +107,10 @@ ul li.completada span {
 
 #eliminarCompletadas {
     margin-top: 15px;
-    background-color: #FF0000;
+    background-color: #f9fd00;
 }
 
 #eliminarCompletadas:hover {
-    background-color: #AA0000;
-    box-shadow: 0 0 10px #FF0000;
+    background-color: #1909ee;
+    box-shadow: 0 0 10px #1909ee;
 }
